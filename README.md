@@ -58,6 +58,7 @@ A hyperlink based format agnostic expert system (plain text).
 ### Marketing
 
 - [ ] App icon, favicon.ico
+- [ ] Screen shots for Github
 
 ## Install
 
@@ -74,13 +75,15 @@ Install requirements.
 pip install -r requirements.md
 ```
 
+Run flask.
+```bash
+./run-flask.sh
+```
+
 Alternatively deploy this flask application using one of their [deployment options](https://flask.palletsprojects.com/en/2.0.x/deploying/index.html).
 
 ## Usage
 
-```bash
-./run-flask.sh
-```
 Open [the running instance](http://127.0.0.1:5000) in a web browser.
 
 ## Configuration
