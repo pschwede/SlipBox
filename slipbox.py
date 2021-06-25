@@ -10,7 +10,7 @@ from random import choice
 from flask import Flask, render_template, escape, redirect
 from glob import glob
 
-import zim2md
+from zim2md import zim2md
 import config
 
 app = Flask(__name__)
@@ -20,6 +20,7 @@ app = Flask(__name__)
 def index():
     """"""
     return redirect("Home.txt", 301)
+
 
 @app.route('/r')
 @app.route('/rand')
@@ -31,16 +32,19 @@ def random():
     return redirect(os.path.relpath(url, start=config.NOTES_HOME),
         307)
 
+
 @app.route('/<path:path>')
 def open_page(path):
-    """"""
+    """Default access to pages."""
     try:
         path = os.path.join(config.NOTES_HOME, path)
         text = ""
         with open(path, "r") as _f:
             text = _f.readlines()
             if zim2md.compatible(path):
-                text = zim2md.translate(text=text, path=os.path.relpath(path, start=config.NOTES_HOME))
+                text = zim2md.translate(text=text,
+                        path=os.path.relpath(path,
+                            start=config.NOTES_HOME))
         return render_template("editor.html", text=text)
-    except FileNotFoundError as e:
-        return render_template("error.html", error=e);
+    except FileNotFoundError as _e:
+        return render_template("error.html", error=_e)
