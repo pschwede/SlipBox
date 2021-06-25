@@ -1,0 +1,22 @@
+{% include 'header.html' %}
+{%block content%}
+    <textarea id="mde">{%for line in text %}{{line|safe}}{%endfor%}</textarea>
+    <script>
+			var smde = new SimpleMDE({
+				element: document.getElementById("mde"),
+				toolbar: [
+					"undo", "redo", "|",
+					"bold", "italic", "heading", "|",
+					"quote", "unordered-list", "ordered-list", "|",
+					"link", "image", "table", "code", "|",
+					"preview", "side-by-side", "fullscreen", "|",
+					"guide",
+					]
+			});
+			smde.codemirror.on("change", function(){
+				console.log(smde.value());
+			});
+			smde.togglePreview();
+		</script>
+{%endblock%}
+{% include 'footer.html' %}

@@ -1,0 +1,3 @@
+[submodule "zim2md"]
+	path = zim2md
+	url = https://github.com/pschwede/zim2md
