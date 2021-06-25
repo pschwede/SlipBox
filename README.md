@@ -23,10 +23,11 @@ A hyperlink based format agnostic expert system (plain text).
 ### Management
 
 - [x] open Random page
-- [ ] Page Browser
+- [ ] Page Tree Browser
 - [ ] Hyperlink assistant
 - [ ] open Similar page
 - [ ] Deduplication
+- [ ] Search tools
 
 ### Visualization
 
