@@ -47,7 +47,7 @@ A hyperlink based format agnostic expert system (plain text).
 ### Versioning
 
 - [ ] Git support
-- [ ] GitHup upload
+- [ ] Github upload
 
 ### Security
 
