@@ -1,1 +1,18 @@
-<a class="w3-bar-item w3-button" href="/r" title="Random page">R</a>
+<script>
+	var sb_create=function() {
+		var newPagePath = prompt('Filename?','{{path.replace("^o/", "").replace(".txt$", "")}}');
+		if(newPagePath != null) {
+			window.location = '/o/' + newPagePath;
+		}
+	}
+	var sb_save=function() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("POST", "write/{{path}}", true)
+		xhttp.setRequestHeader("Content-Type", "application/plaintext");
+		xhttp.send("value="+document.getElementById("mde").innerHTML);
+	}
+</script>
+<a class="w3-bar-item w3-button" title="Home" href="/Home.txt">Ho</a>
+<a class="w3-bar-item w3-button" title="Create page" href="javascript:sb_create();">Cr</a>
+<a class="w3-bar-item w3-button" title="Save page" href="javascript:sb_save();">Sa</a>
+<a class="w3-bar-item w3-button" title="Random page" href="/r">Ra</a>

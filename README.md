@@ -6,16 +6,15 @@ A hyperlink based format agnostic expert system (plain text).
 
 ### Formats
 
-- [x] Markdown (SimpleMDE default)
-- [ ] [GFM](https://github.github.com/gfm)
+- [x] [Github Flavored Markdown](https://github.github.com/gfm) ([SimpleMDE](https://github.com/sparksuite/simplemde-markdown-editor) default)
 - [x] Zim Wiki (translated to Markdown)
 
 ### Pages
 
-- [x] open Linked page
-- [ ] Create
-- [ ] Edit
-- [ ] Save
+- [x] Open
+- [x] Edit
+- [x] Create
+- [x] Save
 - [ ] Delete
 - [ ] File attachments
 - [ ] Template support
