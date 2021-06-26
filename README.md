@@ -88,10 +88,16 @@ Open [the running instance](http://127.0.0.1:5000) in a web browser.
 
 ## Configuration
 
-Edit `config.py`. Example:
+Example content of myconfig.py:
 
 ```python
 NOTES_HOME = "/your/path/to/your/notes"
 DEFAULT_PAGE = "Home.txt"
 DEFAULT_ENDING=".md"
+```
+
+Redirect `config.py` to your file. 
+
+```bash
+rm config.py && ln -s myconfig.py config.py
 ```
