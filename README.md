@@ -9,16 +9,6 @@ A hyperlink based format agnostic expert system (plain text).
 - [x] [Github Flavored Markdown](https://github.github.com/gfm) ([SimpleMDE](https://github.com/sparksuite/simplemde-markdown-editor) default)
 - [x] Zim Wiki (translated to Markdown)
 
-### Pages
-
-- [x] Open
-- [x] Edit
-- [x] Create
-- [x] Save
-- [ ] Delete
-- [ ] File attachments
-- [ ] Template support
-
 ### Management
 
 - [x] open Random page
@@ -43,6 +33,16 @@ A hyperlink based format agnostic expert system (plain text).
 * [ ] Twitter export
 * [ ] Print support
 * [ ] full Twitter live sync
+
+### Pages
+
+- [x] Open
+- [x] Edit
+- [x] Create
+- [x] Save
+- [ ] Delete
+- [ ] File attachments
+- [ ] Template support
 
 ### Versioning
 
