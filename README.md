@@ -88,4 +88,10 @@ Open [the running instance](http://127.0.0.1:5000) in a web browser.
 
 ## Configuration
 
-Edit `config.py`.
+Edit `config.py`. Example:
+
+```python
+NOTES_HOME = "/your/path/to/your/notes"
+DEFAULT_PAGE = "Home.txt"
+DEFAULT_ENDING=".md"
+```
