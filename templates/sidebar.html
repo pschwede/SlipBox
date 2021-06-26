@@ -1,13 +1,13 @@
 <script>
 	var sb_create=function() {
-		var newPagePath = prompt('Filename?','{{path.replace("^o/", "").replace(".txt$", "")}}');
+		var newPagePath = prompt('Filename?','{{path.replace("^/pages/", "")}}');
 		if(newPagePath != null) {
-			window.location = '/o/' + newPagePath;
+			window.location = '/pages/' + newPagePath;
 		}
 	}
 	var sb_save=function() {
 		var xhttp = new XMLHttpRequest();
-		xhttp.open("POST", "write/{{path}}", true)
+		xhttp.open("POST", "/write/{{path}}", true)
 		xhttp.setRequestHeader("Content-Type", "application/plaintext");
 		xhttp.send("value="+document.getElementById("mde").innerHTML);
 	}

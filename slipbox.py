@@ -61,4 +61,4 @@ def open_page(path):
         return render_template("editor.html", text="# %s\nCreated %s\n\n" % (
             path.split("/")[-1],
             datetime.now()),
-            path=os.path.relpath(path+config.DEFAULT_ENDING, config.NOTES_HOME))
+            path=os.path.relpath(path, config.NOTES_HOME))
