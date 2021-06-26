@@ -7,7 +7,7 @@ A hyperlink based format agnostic expert system (plain text).
 ### Formats
 
 - [x] [Github Flavored Markdown](https://github.github.com/gfm) ([SimpleMDE](https://github.com/sparksuite/simplemde-markdown-editor) default)
-- [x] [Zim Desktop Wiki](https//zim-wiki.org) (translated to GFM)
+- [x] [Zim Desktop Wiki](https://zim-wiki.org) (translated to GFM)
 
 ### Management
 
