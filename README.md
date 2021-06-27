@@ -41,6 +41,7 @@ A hyperlink based format agnostic expert system (plain text).
 - [x] Create
 - [x] Save
 - [ ] Delete
+- [ ] Subpages (Folders)
 - [ ] File attachments
 - [ ] Template support
 
@@ -75,9 +76,21 @@ Install requirements.
 pip install -r requirements.md
 ```
 
-Run flask.
+
+Add a `config.py`, for example:
+
+```python
+NOTES_HOME = "/your/path/to/your/notes"
+DEFAULT_PAGE = "Home.txt"
+DEFAULT_ENDING=".md"
+DEBUG=True
+HOST='0.0.0.0'
+PORT='5000'
+```
+
+Run the server.
 ```bash
-./run-flask.sh
+./slipbox.py
 ```
 
 Alternatively deploy this flask application using one of their [deployment options](https://flask.palletsprojects.com/en/2.0.x/deploying/index.html).
@@ -86,15 +99,6 @@ Alternatively deploy this flask application using one of their [deployment optio
 
 Open [the running instance](http://127.0.0.1:5000) in a web browser.
 
-## Configuration
-
-Example content of myconfig.py:
-
-```python
-NOTES_HOME = "/your/path/to/your/notes"
-DEFAULT_PAGE = "Home.txt"
-DEFAULT_ENDING=".md"
-```
 
 Redirect `config.py` to your file. 
 
