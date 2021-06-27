@@ -9,7 +9,8 @@
 		var xhttp = new XMLHttpRequest();
 		xhttp.open("POST", "/write/{{path}}", true)
 		xhttp.setRequestHeader("Content-Type", "application/plaintext");
-		xhttp.send("value="+document.getElementById("mde").innerHTML);
+		//xhttp.send(document.getElementById("mde").innerHTML);
+		xhttp.send(smde.value());
 	}
 </script>
 <a class="w3-bar-item w3-button" title="Home" href="/Home.txt">Ho</a>
