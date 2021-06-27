@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 SlipBox server
@@ -28,8 +28,8 @@ def index():
 @app.route('/random')
 def random():
     """Picks a random page"""
-    url = choice(glob(os.path.join(config.NOTES_HOME, "**/*.txt"),
-        recursive=True))
+    url = choice(glob(os.path.join(config.NOTES_HOME, "**.txt"),
+        recursive=True) + glob(os.path.join(config.NOTES_HOME, "**.md")))
     return redirect(os.path.relpath(url, start=config.NOTES_HOME),
         307)
 
@@ -39,8 +39,16 @@ def write(path):
     """Writes content to disk."""
     if request.method == "POST":
         with open(os.path.join(config.NOTES_HOME, path), "w") as _f:
-            _f.write(request.form["value"])
+            _f.write(request.get_data(as_text=True))
     return "1"
+
+
+@app.route('/tree/<path:path>')
+def tree(path):
+    return render_template(
+            "tree.html",
+            plist=glob(os.path.join(path, '**.txt'))+glob(os.path.join(path, '**.md'))
+            )
 
 
 @app.route('/<path:path>')
@@ -62,3 +70,6 @@ def open_page(path):
             path.split("/")[-1],
             datetime.now()),
             path=os.path.relpath(path, config.NOTES_HOME))
+
+if __name__ == "__main__":
+    app.run(host=config.HOST, port=config.PORT, debug=config.DEBUG)
